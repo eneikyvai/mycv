@@ -1,0 +1,283 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b9dfe2;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #0f1b27;
+    color: #fff;
+}
+
+body.dark-mode .cv-container,
+body.dark-mode .contact ul,
+body.dark-mode .about p,
+body.dark-mode .experience .job,
+body.dark-mode .education .degree,
+body.dark-mode .skills ul 
+{ 
+    background-color: #31343a;
+    color: #cfd8eb;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode .theme-toggle,
+body.dark-mode nav ul li a {
+    color: #fff;
+}
+
+body.dark-mode section h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #5f5f5f;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+body.dark-mode nav ul li a:hover {
+    color: #60b4db;
+}
+
+body.dark-mode .contact ul li strong {
+    color: #b9dfe2;
+}
+
+body.dark-mode .experience .job h3 {
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+body.dark-mode .education .degree h3 {
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+/* Main container */
+.cv-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fcf4e7;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.363);
+    transition: background-color 0.3s;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-pic img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #003366;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.247);
+}
+
+.profile-text {
+    text-align: left;
+}
+
+.profile-text h1 {
+    font-size: 2.5rem;
+    color: #003366;
+}
+
+.profile-text .profession {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Theme toggle button */
+button.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    cursor: pointer;
+    color: #003366;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #003366;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #02afff;
+}
+
+/* Section common styles */
+section {
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Common card styles */
+.contact ul,
+.about p,
+.experience .job,
+.education .degree,
+.skills ul {
+    background: #fcf4e7;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.171);
+}
+
+/* Contact section */
+.contact ul {
+    list-style-type: none;
+}
+
+.contact ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.contact ul li strong {
+    color: #021222;
+}
+
+/* About section */
+.about p {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Experience section */
+.experience .job h3 {
+    font-size: 1.6rem;
+    color: #003366;
+}
+
+.dates {
+    font-size: 1.1rem;
+    color: #666666;
+}
+
+.job ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.job ul li {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Education section */
+.education .degree h3 {
+    font-size: 1.6rem;
+    color: #003366;
+}
+
+/* Skills section */
+.skills ul {
+    list-style-type: none;
+}
+
+.skills ul li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .cv-container {
+        width: 90%;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .profile-container {
+        flex-direction: column;
+    }
+
+    .profile-pic img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-text h1 {
+        font-size: 2rem;
+    }
+
+    .contact ul li,
+    .about p,
+    .job ul li,
+    .skills ul li {
+        font-size: 1rem;
+    }
+}
